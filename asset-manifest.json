@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/black-dahlia-preview/static/css/main.9bd87bea.css",
-    "main.js": "/black-dahlia-preview/static/js/main.bb7ace06.js",
-    "static/js/453.14217530.chunk.js": "/black-dahlia-preview/static/js/453.14217530.chunk.js",
-    "static/media/Inter-Regular.ttf": "/black-dahlia-preview/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
-    "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/black-dahlia-preview/static/media/PlayfairDisplay-VariableFont_wght.bf46a6bcddc9999a295e.ttf",
-    "static/media/september-script.regular.ttf": "/black-dahlia-preview/static/media/september-script.regular.357314c66c7fd92cf74c.ttf",
-    "static/media/Merriweather-Regular.ttf": "/black-dahlia-preview/static/media/Merriweather-Regular.da67ca8c38ef44c4773d.ttf",
-    "static/media/Prata-Regular.ttf": "/black-dahlia-preview/static/media/Prata-Regular.2eeab737052a4ae3b2a9.ttf",
-    "static/media/Bison-Bold.ttf": "/black-dahlia-preview/static/media/Bison-Bold.0ec7f8e68fac9f1c4eef.ttf",
-    "static/media/Ledger-Regular.ttf": "/black-dahlia-preview/static/media/Ledger-Regular.af758062fdcbe3027bfd.ttf",
-    "static/media/BebasNeue-Regular.ttf": "/black-dahlia-preview/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
-    "index.html": "/black-dahlia-preview/index.html",
-    "main.9bd87bea.css.map": "/black-dahlia-preview/static/css/main.9bd87bea.css.map",
-    "main.bb7ace06.js.map": "/black-dahlia-preview/static/js/main.bb7ace06.js.map",
-    "453.14217530.chunk.js.map": "/black-dahlia-preview/static/js/453.14217530.chunk.js.map"
+    "main.css": "/react_web_template/static/css/main.6b0934f0.css",
+    "main.js": "/react_web_template/static/js/main.b704c0ce.js",
+    "static/js/453.14217530.chunk.js": "/react_web_template/static/js/453.14217530.chunk.js",
+    "static/media/Inter-Regular.ttf": "/react_web_template/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
+    "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/react_web_template/static/media/PlayfairDisplay-VariableFont_wght.bf46a6bcddc9999a295e.ttf",
+    "static/media/september-script.regular.ttf": "/react_web_template/static/media/september-script.regular.357314c66c7fd92cf74c.ttf",
+    "static/media/Merriweather-Regular.ttf": "/react_web_template/static/media/Merriweather-Regular.da67ca8c38ef44c4773d.ttf",
+    "static/media/Prata-Regular.ttf": "/react_web_template/static/media/Prata-Regular.2eeab737052a4ae3b2a9.ttf",
+    "static/media/Bison-Bold.ttf": "/react_web_template/static/media/Bison-Bold.0ec7f8e68fac9f1c4eef.ttf",
+    "static/media/Ledger-Regular.ttf": "/react_web_template/static/media/Ledger-Regular.af758062fdcbe3027bfd.ttf",
+    "static/media/BebasNeue-Regular.ttf": "/react_web_template/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
+    "index.html": "/react_web_template/index.html",
+    "main.6b0934f0.css.map": "/react_web_template/static/css/main.6b0934f0.css.map",
+    "main.b704c0ce.js.map": "/react_web_template/static/js/main.b704c0ce.js.map",
+    "453.14217530.chunk.js.map": "/react_web_template/static/js/453.14217530.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bd87bea.css",
-    "static/js/main.bb7ace06.js"
+    "static/css/main.6b0934f0.css",
+    "static/js/main.b704c0ce.js"
   ]
 }
