@@ -8,15 +8,6 @@ import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 interface TimeLineStoryProps  {
     className?: string
 }
-interface singleSlide {
-    name: string, 
-    slide_body: {
-        description: string,
-        leftBG: string,
-        rightBG: string,
-        picNote: string
-    }
-}
 
 // ./timelineStory-pictures/
 const TimeLineStory = (props: TimeLineStoryProps) => {
@@ -153,7 +144,7 @@ const TimeLineStory = (props: TimeLineStoryProps) => {
                             </div>
 
                             <div id="slidePic">
-                                <img id="slideImg" src={`${process.env.PUBLIC_URL}/timelineStory-pictures/${slideList[index].slide_body.rightBG}`} alt="Carousel Picture"/>
+                                <img id="slideImg" src={`${process.env.PUBLIC_URL}/timelineStory-pictures/${slideList[index].slide_body.rightBG}`} alt="Carousel 2"/>
                                 <p className={`m-0 note_${index}`} id="picNote">{slideList[index].slide_body.picNote}</p>
                             </div>
                         </div>
