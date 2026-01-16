@@ -5,7 +5,7 @@ import NavigationBarSmallScreen from './components/NavigationBarSmallScreen/Navi
 import HomePage from './pages/HomePage';
 import Page2 from './pages/Page2';
 import Page1 from './pages/Page1';
-
+import Animations from './pages/Animations';
 import Footer from './components/Footer/Footer';
 
 import './style/App.scss';
@@ -39,6 +39,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Carousels" element={<Page1 />} />
         <Route path="/page_2" element={<Page2 />} />
+        <Route path="/Animations" element={<Animations />} />
       </Routes>
 
       <Footer/>

@@ -8,6 +8,7 @@ const NavigationBar = () => {
             <Link className="navLinks" to={'/'}><p>Home Page</p></Link>
             <Link className="navLinks" to={'/Carousels'}><p>Carousels</p></Link>
             <Link className="navLinks" to={'/page_2'}><p>Page 2</p></Link>
+            <Link className="navLinks" to={'/Animations'}><p>Animations</p></Link>
         </div>
     )
 }
