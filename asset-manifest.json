@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_web_template/static/css/main.6b0934f0.css",
-    "main.js": "/react_web_template/static/js/main.b704c0ce.js",
+    "main.css": "/react_web_template/static/css/main.9373f159.css",
+    "main.js": "/react_web_template/static/js/main.7fde51b2.js",
     "static/js/453.14217530.chunk.js": "/react_web_template/static/js/453.14217530.chunk.js",
     "static/media/Inter-Regular.ttf": "/react_web_template/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/react_web_template/static/media/PlayfairDisplay-VariableFont_wght.bf46a6bcddc9999a295e.ttf",
@@ -12,12 +12,12 @@
     "static/media/Ledger-Regular.ttf": "/react_web_template/static/media/Ledger-Regular.af758062fdcbe3027bfd.ttf",
     "static/media/BebasNeue-Regular.ttf": "/react_web_template/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "index.html": "/react_web_template/index.html",
-    "main.6b0934f0.css.map": "/react_web_template/static/css/main.6b0934f0.css.map",
-    "main.b704c0ce.js.map": "/react_web_template/static/js/main.b704c0ce.js.map",
+    "main.9373f159.css.map": "/react_web_template/static/css/main.9373f159.css.map",
+    "main.7fde51b2.js.map": "/react_web_template/static/js/main.7fde51b2.js.map",
     "453.14217530.chunk.js.map": "/react_web_template/static/js/453.14217530.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b0934f0.css",
-    "static/js/main.b704c0ce.js"
+    "static/css/main.9373f159.css",
+    "static/js/main.7fde51b2.js"
   ]
 }
