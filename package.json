@@ -7,10 +7,10 @@
     "spa-fallback": "node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
     "build:preview": "env-cmd -f .env.preview react-scripts build",
     "predeploy:preview": "npm run build:preview && npm run spa-fallback",
-    "deploy:preview": "gh-pages -d build -b live",
+    "deploy:preview": "node scripts/deploy.js live https://github.com/Marcolux/CLIENT_PREVIEW_REPO.git",
     "build:official": "env-cmd -f .env.official react-scripts build",
-    "predeploy:official": "npm run build:official && npm run spa-fallback && node -e \"require('fs').writeFileSync('build/CNAME','customDomain.com')\"",
-    "deploy:official": "gh-pages -d build -b live -r https://github.com/Marcolux/xxxxx.git"
+    "predeploy:official": "npm run build:official && npm run spa-fallback && node -e \"require('fs').writeFileSync('build/CNAME','CLIENT_DOMAIN.com')\"",
+    "deploy:official": "node scripts/deploy.js live https://github.com/Marcolux/CLIENT_LIVE_REPO.git"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -27,6 +27,7 @@
     "framer-motion": "^12.24.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
     "react-intersection-observer": "^10.0.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",

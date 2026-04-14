@@ -1,15 +1,18 @@
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import NavigationBarSmallScreen from './components/NavigationBarSmallScreen/NavigationBarSmallScreen';
-import HomePage from './pages/HomePage';
-import Page2 from './pages/Page2';
-import Page1 from './pages/Page1';
-import Animations from './pages/Animations';
 import Footer from './components/Footer/Footer';
+import PageLoader from './components/PageLoader/PageLoader';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 import './style/App.scss';
-import { useEffect, useState } from 'react';
+
+const HomePage   = lazy(() => import('./pages/HomePage'));
+const Page1      = lazy(() => import('./pages/Page1'));
+const Page2      = lazy(() => import('./pages/Page2'));
+const Animations = lazy(() => import('./pages/Animations'));
 
 function App() {
   const [smallScreenView, setSmallScreenView] = useState('Regular')
@@ -20,10 +23,10 @@ function App() {
   useEffect(() => {
     handleResize()
     window.addEventListener('resize', handleResize)
-    return () => { 
+    return () => {
       window.removeEventListener('resize', handleResize)
     }
-  },[])
+  }, [])
 
   return (
     <div className="App flex flex-column col-12">
@@ -34,13 +37,18 @@ function App() {
         :
         <NavigationBarSmallScreen/>
       }
-      
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/Carousels" element={<Page1 />} />
-        <Route path="/page_2" element={<Page2 />} />
-        <Route path="/Animations" element={<Animations />} />
-      </Routes>
+
+      <ScrollToTop />
+      <main id="main-content">
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/"          element={<HomePage />} />
+            <Route path="/Carousels" element={<Page1 />} />
+            <Route path="/page_2"    element={<Page2 />} />
+            <Route path="/Animations" element={<Animations />} />
+          </Routes>
+        </Suspense>
+      </main>
 
       <Footer/>
     </div>

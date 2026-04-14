@@ -4,12 +4,12 @@ import './navigation-bar.scss'
 const NavigationBar = () => {
 
     return (
-        <div className="flex flex-alignItems-center flex-justifyContent-center navBar">
-            <Link className="navLinks" to={'/'}><p>Home Page</p></Link>
-            <Link className="navLinks" to={'/Carousels'}><p>Carousels</p></Link>
-            <Link className="navLinks" to={'/page_2'}><p>Page 2</p></Link>
-            <Link className="navLinks" to={'/Animations'}><p>Animations</p></Link>
-        </div>
+        <nav aria-label="Main navigation" className="flex flex-alignItems-center flex-justifyContent-center navBar">
+            <Link className="navLinks" to={'/'}>Home Page</Link>
+            <Link className="navLinks" to={'/Carousels'}>Carousels</Link>
+            <Link className="navLinks" to={'/page_2'}>Page 2</Link>
+            <Link className="navLinks" to={'/Animations'}>Animations</Link>
+        </nav>
     )
 }
 

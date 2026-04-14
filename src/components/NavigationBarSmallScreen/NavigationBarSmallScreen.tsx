@@ -17,27 +17,32 @@ const NavigationBarSmallScreen = () => {
 
     return (
         <>
-            <div className='hambContainer' onClick={toggleLogic}>
-                <div className={isExpanded  ? 'hamburger-menu openHam':'hamburger-menu'}>
+            <button
+                className="hambContainer"
+                onClick={toggleLogic}
+                aria-expanded={isExpanded}
+                aria-controls="smallScreenMenu"
+                aria-label={isExpanded ? 'Close navigation menu' : 'Open navigation menu'}
+            >
+                <div className={isExpanded ? 'hamburger-menu openHam' : 'hamburger-menu'} aria-hidden="true">
                     <div className="bar" id="bar1"></div>
                     <div className="bar" id="bar2"></div>
                     <div className="bar" id="bar3"></div>
                 </div>
-            </div>
-            
+            </button>
+
             {transitions((style, item) =>
                 item ? (
-                    <animated.div style={style} id="smallScreenMenu">
-                        <div className='navBarSm'>
-                            <Link className="navLinks" onClick={toggleLogic} to={'/'}><p>Home Page</p></Link>
-                            <Link className="navLinks" onClick={toggleLogic} to={'/Carousels'}><p>Carousels</p></Link>
-                            <Link className="navLinks" onClick={toggleLogic} to={'/page_2'}><p>Page 2</p></Link>
-                            <Link className="navLinks" to={'/Animations'}><p>Animations</p></Link>
-                        </div>
+                    <animated.div style={style} id="smallScreenMenu" role="dialog" aria-label="Navigation menu">
+                        <nav aria-label="Main navigation" className='navBarSm'>
+                            <Link className="navLinks" onClick={toggleLogic} to={'/'}>Home Page</Link>
+                            <Link className="navLinks" onClick={toggleLogic} to={'/Carousels'}>Carousels</Link>
+                            <Link className="navLinks" onClick={toggleLogic} to={'/page_2'}>Page 2</Link>
+                            <Link className="navLinks" onClick={toggleLogic} to={'/Animations'}>Animations</Link>
+                        </nav>
                     </animated.div>
                 ) : null
             )}
-            
         </>
     )
 }

@@ -2,42 +2,118 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CLIENT CONFIG — update these placeholders before launch
+         ═══════════════════════════════════════════════════════════════════
+         SITE_LANG      → html lang attribute, e.g. "it" or "en"
+         SITE_NAME      → brand name, e.g. "Acme Studio"
+         SITE_URL       → canonical root, e.g. "https://www.acme.com"
+         SITE_TAGLINE   → short description used in the default title
+         SITE_DESC      → default meta description (≤160 chars)
+         SITE_OG_IMAGE  → absolute URL to a 1200×630 social-share image
+         GTM_ID         → Google Tag Manager container ID, e.g. "GTM-XXXXXXX"
+                          Set to empty string "" to disable GTM entirely
+         ═══════════════════════════════════════════════════════════════════ -->
+
+    <!-- Default description (overridden per-page by SEOHead component) -->
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="CLIENT_DESC"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Favicon / PWA -->
+    <link rel="icon"             href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest"         href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Performance: preconnect to any third-party origins used site-wide -->
+    <!-- Add / remove entries to match your actual external resources       -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />       -->
+    <!-- <link rel="preconnect" href="https://use.typekit.net" crossorigin /> -->
+
+    <!-- Default title (overridden per-page by SEOHead component) -->
+    <title>CLIENT_NAME | CLIENT_TAGLINE</title>
+
+    <!-- Canonical (overridden per-page by SEOHead component) -->
+    <link rel="canonical" href="CLIENT_URL" />
+
+    <!-- Open Graph (overridden per-page by SEOHead component) -->
+    <meta property="og:type"         content="website" />
+    <meta property="og:url"          content="CLIENT_URL" />
+    <meta property="og:locale"       content="en_US" />
+    <meta property="og:site_name"    content="CLIENT_NAME" />
+    <meta property="og:title"        content="CLIENT_NAME | CLIENT_TAGLINE" />
+    <meta property="og:description"  content="CLIENT_DESC" />
+    <meta property="og:image"        content="CLIENT_OG_IMAGE" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt"    content="CLIENT_NAME" />
+
+    <!-- Twitter / X Card (overridden per-page by SEOHead component) -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="CLIENT_NAME | CLIENT_TAGLINE" />
+    <meta name="twitter:description" content="CLIENT_DESC" />
+    <meta name="twitter:image"       content="CLIENT_OG_IMAGE" />
+    <meta name="twitter:image:alt"   content="CLIENT_NAME" />
+
+    <!-- Google Tag Manager — replace GTM_ID or remove this block if not used -->
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM_ID');</script> -->
+    <!-- End Google Tag Manager -->
+
+    <!-- Organization JSON-LD — validate at: https://search.google.com/test/rich-results -->
+    <!-- Update all CLIENT_* fields below, or replace @type with "LocalBusiness" etc.     -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "CLIENT_URL/#organization",
+          "name": "CLIENT_NAME",
+          "url": "CLIENT_URL",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "CLIENT_OG_IMAGE",
+            "width": 1200,
+            "height": 630
+          },
+          "description": "CLIENT_DESC",
+          "sameAs": [
+            "https://www.instagram.com/CLIENT_INSTAGRAM",
+            "https://www.facebook.com/CLIENT_FACEBOOK"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "CLIENT_URL/#website",
+          "url": "CLIENT_URL",
+          "name": "CLIENT_NAME",
+          "publisher": { "@id": "CLIENT_URL/#organization" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
+
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) — keep in sync with GTM_ID above -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM_ID"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Skip-to-content link: only visible on keyboard focus, lets users skip the navbar -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
